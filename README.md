@@ -76,7 +76,7 @@ SCSS
 		/* custom style */
 	}
 	.colorful-tab-content{
-			/* custom style */
+		/* custom style */
 	}
 }
 ```
