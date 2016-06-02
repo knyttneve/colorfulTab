@@ -54,6 +54,13 @@ $("#exampleTab").colorfulTab({
 });
 ```
 
+### Background Image
+```sh
+<ul class="colorful-tab-menu">
+	<li class="colorful-tab-menu-item" data-background="image.jpg">
+	...
+</ul>
+```
 
 ### Create a Custom Theme
 
