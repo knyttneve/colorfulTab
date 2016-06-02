@@ -25,7 +25,7 @@ $("#exampleTab").colorfulTab();
 		<li class="colorful-tab-menu-item" data-color="#353535">
 			<a href="#tab2">Tab 2</a>
 		</li>
-		<li class="colorful-tab-menu-item" data-color="d5d5d5">
+		<li class="colorful-tab-menu-item" data-color="#d5d5d5">
 			<a href="#tab3">Tab 3</a>
 		</li>
 	</ul>
