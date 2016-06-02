@@ -193,7 +193,8 @@ $wrapper-background:#aaa;
   }
 }
 
-// responsive
+
+// responsive 
 @media (max-width: 767px) {
   .#{$prefix}-menu {
     flex-direction: column;
