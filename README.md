@@ -35,6 +35,7 @@ $("#exampleTab").colorfulTab();
 		<div class="colorful-tab-content active" id="tab1">...</div>
 		<div class="colorful-tab-content" id="tab2">...</div>
 		<div class="colorful-tab-content" id="tab3">...</div>
+	</div>
 
 </div>
 ```
