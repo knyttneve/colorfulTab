@@ -1,0 +1,24 @@
+{
+  "name": "colorfulTab",
+  "version": "1.0.0",
+  "description": "simple & colorful jquery tab plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knyttneve/colorfulTab.git"
+  },
+  "keywords": [
+    "tab",
+    "jquery",
+    "colorful"
+  ],
+  "author": "Mert Nerukuc",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}

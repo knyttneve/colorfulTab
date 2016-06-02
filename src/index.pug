@@ -1,0 +1,132 @@
+doctype html
+html(lang="en")
+    head
+        title colorfulTab - flexible &amp; colorful jquery tab plugin
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(type="text/css" rel="stylesheet" href="css/reset.css")
+        link(type="text/css" rel="stylesheet" href="css/demo.css")
+        link(type="text/css" rel="stylesheet" href="css/colorfulTab.min.css")
+    body
+    -var prefix="colorful-tab", id="colorful", alias="clr", alias2="elp", alias3="fl", alias4="bg";
+    -var menu=["SCSS", "Pug", "Gulp", "HTML5", "jQuery"];
+    -var menu_colors=["#8021D3", "#00A566", "#C9003C", "#E54400", "#445370"]; 
+    -var menu_colors2=["#00A566", "#8021D3", "#C9003C", "#E54400", "#445370"]; 
+    -var menu_colors3=["#C9003C", "#00A566", "#8021D3", "#E54400", "#445370"]; 
+    -var background_images=["img/tab1.jpg","img/tab2.jpg","img/tab3.jpg","img/tab4.jpg","img/tab5.jpg"];
+    -var content=["Bitters cronut butcher, +1 dreamcatcher readymade fingerstache cray synth bespoke godard. Street art franzen polaroid gentrify. Lo-fi typewriter banh mi, lomo shabby chic asymmetrical street art craft beer narwhal heirloom. Gluten-free fixie readymade sartorial dreamcatcher godard DIY cold-pressed meggings distillery. Gochujang hoodie viral, yuccie taxidermy squid pork belly. Yr locavore pinterest pork belly thundercats heirloom, forage disrupt. Gochujang dreamcatcher kinfolk, kale chips pabst vegan green juice direct trade small batch vice lumbersexual farm-to-table art party chartreuse godard.", "Hoodie four loko letterpress freegan skateboard sartorial, polaroid forage ramps 8-bit direct trade. Chia chicharrones humblebrag 8-bit. Intelligentsia semiotics 8-bit banjo poutine chillwave. +1 small batch vegan, truffaut crucifix taxidermy twee banjo meggings blog scenester ugh. Keffiyeh readymade art party cold-pressed. Heirloom pork belly photo booth scenester cold-pressed neutra. Vice actually shoreditch viral poutine, vinyl fanny pack retro etsy kickstarter.", "Single-origin coffee tilde craft beer organic wolf. Plaid kickstarter vegan roof party vice, try-hard taxidermy truffaut small batch. PBR&B butcher helvetica, green juice craft beer kickstarter skateboard. +1 selvage VHS gastropub slow-carb, twee vegan helvetica farm-to-table marfa seitan letterpress narwhal squid cliche. Meggings fap leggings slow-carb kickstarter, health goth gastropub hashtag blue bottle photo booth literally PBR&B iPhone ugh. Organic scenester truffaut pug, pitchfork man bun artisan brooklyn photo booth. Biodiesel farm-to-table 8-bit direct trade humblebrag, man braid blue bottle.", "Austin artisan cornhole, microdosing messenger bag neutra tilde ramps chambray knausgaard. Messenger bag helvetica dreamcatcher migas, pork belly cold-pressed actually schlitz viral green juice vegan. XOXO mustache butcher, artisan shoreditch beard seitan lo-fi locavore banh mi skateboard organic. Sriracha ennui synth, viral chartreuse gentrify umami. Beard pour-over single-origin coffee, direct trade post-ironic keytar roof party twee shoreditch. Godard heirloom wolf, pabst pickled offal shoreditch. Kogi gentrify truffaut, viral irony kickstarter tumblr pop-up kitsch jean shorts next level cold-pressed.","Keffiyeh tumblr street art cold-pressed jean shorts. Street art pug 3 wolf moon cronut. Bicycle rights XOXO fanny pack cliche, cardigan meh distillery art party viral fixie roof party shabby chic kinfolk ethical yr. Poutine typewriter flannel pickled, chartreuse listicle brunch portland synth godard. Selfies echo park lo-fi ramps bespoke ugh, crucifix heirloom waistcoat squid literally. Craft beer green juice yr vinyl, sriracha pork belly pop-up seitan etsy put a bird on it truffaut. Paleo chartreuse drinking vinegar, try-hard heirloom letterpress 90's hella godard fashion axe man bun VHS pour-over farm-to-table."]; 
+    .clr-header
+        h1 colorfulTab <span>flexible &amp; colorful jquery tab plugin</span>
+        a(href="https://github.com/knyttneve/colorfulTab") Github
+    .clr-title
+      h1 Default
+      code $('#example-id').colorfulTab();
+
+    // Default 
+    div(class=prefix + "-wrapper" id=id)
+      ul(class=prefix + "-menu")
+        each menu_item, menu_index in menu
+          if(menu_index==0)
+            li(class=prefix+"-menu-item active",tab-color=menu_colors2[menu_index])
+              a(href='#'+alias+"-"+menu_index)=menu_item
+          else
+            li(class=prefix+"-menu-item",tab-color=menu_colors2[menu_index])
+              a(href='#'+alias+"-"+menu_index)=menu_item
+      div(class=prefix+"-container")   
+        each content_item,content_index in content
+          if(content_index==0)
+            div(class=prefix + "-content active" id=alias+"-"+content_index)   
+              p=content_item
+          else
+            div(class=prefix + "-content" id=alias+"-"+content_index)  
+              p=content_item
+    // Default 
+    .clr-title
+      h1 Elliptic
+      h2 $('#example-id').colorfulTab({<u>theme</u>:'elliptic'});
+
+    // Elliptic 
+    div(class=prefix + "-wrapper" id="colorful-elliptic")
+      ul(class=prefix + "-menu")
+        each menu_item, menu_index in menu
+          if(menu_index==0)
+            li(class=prefix+"-menu-item active",tab-color=menu_colors3[menu_index])
+              a(href='#'+alias2+"-"+menu_index)=menu_item
+          else
+            li(class=prefix+"-menu-item",tab-color=menu_colors3[menu_index])
+              a(href='#'+alias2+"-"+menu_index)=menu_item
+      div(class=prefix+"-container")   
+        each content_item,content_index in content
+          if(content_index==0)
+            div(class=prefix + "-content active" id=alias2+"-"+content_index)   
+              p=content_item
+          else
+            div(class=prefix + "-content" id=alias2+"-"+content_index)  
+              p=content_item
+    // Elliptic 
+    .clr-title
+      h1 Flatline
+      code $('#example-id').colorfulTab({<u>theme</u>:'flatline'});
+    // Flatline 
+    div(class=prefix + "-wrapper" id="colorful-flatline")
+      ul(class=prefix + "-menu")
+        each menu_item, menu_index in menu
+          if(menu_index==0)
+            li(class=prefix+"-menu-item active",tab-color=menu_colors[menu_index])
+              a(href='#'+alias3+"-"+menu_index)=menu_item
+          else
+            li(class=prefix+"-menu-item",tab-color=menu_colors[menu_index])
+              a(href='#'+alias3+"-"+menu_index)=menu_item
+      div(class=prefix+"-container")   
+        each content_item,content_index in content
+          if(content_index==0)
+            div(class=prefix + "-content active" id=alias3+"-"+content_index)   
+              p=content_item
+          else
+            div(class=prefix + "-content" id=alias3+"-"+content_index)  
+              p=content_item
+    // Flatline 
+    .clr-title
+      h1 Background Image
+      code $('#example-id').colorfulTab({<br/><u>theme</u>:'flatline',<br/><u>backgroundImage</u>:'true',<br/><u>overlayColor</u>:'true',<br/><u>overlayOpacity</u>:'0.8'<br/>});
+    // Background Image 
+    div(class=prefix + "-wrapper" id="colorful-background-image")
+      ul(class=prefix + "-menu")
+        each menu_item, menu_index in menu
+          if(menu_index==0)
+            li(class=prefix+"-menu-item active",tab-background=background_images[menu_index])
+              a(href='#'+alias4+"-"+menu_index)=menu_item
+          else 
+            li(class=prefix+"-menu-item",tab-background=background_images[menu_index])
+              a(href='#'+alias4+"-"+menu_index)=menu_item
+      div(class=prefix+"-container")   
+        each content_item,content_index in content
+          if(content_index==0)
+            div(class=prefix + "-content active" id=alias4+"-"+content_index)   
+              p=content_item
+          else
+            div(class=prefix + "-content" id=alias4+"-"+content_index)  
+              p=content_item
+    // Background Image 
+    script(type="text/javascript",src="js/jquery.min.js")
+    script(type="text/javascript",src="js/colorfulTab.min.js")
+    script(type='text/javascript').
+        $(document).ready(function(){
+            
+            $("#colorful").colorfulTab();    
+            
+            $("#colorful-elliptic").colorfulTab({
+                theme: "elliptic"
+            }); 
+           
+           $("#colorful-flatline").colorfulTab({
+                theme: "flatline"
+            });    
+            
+            $("#colorful-background-image").colorfulTab({
+                theme: "flatline",
+                backgroundImage: "true",
+                overlayColor: "#002F68",
+                overlayOpacity: "0.8"
+            });   
+        
+        });

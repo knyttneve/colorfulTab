@@ -1,0 +1,73 @@
+/* 
+    Author: Mert Nerukuc
+    @knyttneve
+*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+.clr-title {
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 0.99) 99%, #e2e2e2 100%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 0.99) 99%, #e2e2e2 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 0.99) 99%, #e2e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#e2e2e2', GradientType=1);
+  padding: 30px 30px 30px 0;
+  box-sizing: border-box;
+  align-items: center;
+  width: 45%; }
+  .clr-title h1 {
+    flex: 1 1 45%;
+    font-size: 24px;
+    font-family: Montserrat; }
+  .clr-title code {
+    flex: 1 1 55%;
+    line-height: 27px;
+    line-height: 27px;
+    font-family: Inconsolata;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: right; }
+    .clr-title h2 span {
+      font-weight: bold; }
+.clr-header{
+     width:45%;
+    margin:60px auto;
+}
+.clr-header h1{
+    font-family:Montserrat;
+    font-size: 23px;
+    display: inline-block;
+}
+.clr-header h1 span{
+    font-family:Inconsolata;
+    font-size: 15px;
+    display:inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    color: rgba(0,0,0,.6)
+}
+
+.clr-header a{
+    float: right;
+    color: #d3d3d3;
+    font-family: Montserrat;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 2px solid #e5e5e5;
+    transition:  .3s ease all;
+    border-radius: 5px;
+}
+.clr-header a:hover{
+    color: #c6c6c6;
+    border-color: #c6c6c6;
+}
+
+@media (max-width: 1366px) {
+  .clr-title code {
+    flex: 1 1 75%; }
+  .clr-title h1 {
+    flex: 1 1 25%;
+    line-height: 25px;
+    font-size: 21px; } }
