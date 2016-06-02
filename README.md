@@ -19,13 +19,13 @@ $("#exampleTab").colorfulTab();
 
 	<!-- Tab Menu -->
 	<ul class="colorful-tab-menu">
-		<li class="colorful-tab-menu-item active">
+		<li class="colorful-tab-menu-item active" data-color="#000">
 			<a href="#tab1">Tab 1</a>
 		</li>
-		<li class="colorful-tab-menu-item">
+		<li class="colorful-tab-menu-item" data-color="#353535">
 			<a href="#tab2">Tab 2</a>
 		</li>
-		<li class="colorful-tab-menu-item">
+		<li class="colorful-tab-menu-item" data-color="d5d5d5">
 			<a href="#tab3">Tab 3</a>
 		</li>
 	</ul>
